@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Identificação de Flor</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="assets/img/pngwing.com (2).png" alt="Imagem da flor">
+        </div>
+
+        <div class="form">
+            <form action="#" id="flowerIdentificationForm">
+                <div class="button-group">
+                    <div class="login-button">
+                        <button id="clearFieldsButton"><span>Limpar Campos</span></button>
+                    </div>
+                    <div class="about-us-button">
+                        <button id="aboutUsButton"><a href="about-us.html"><span>Sobre Nós</span></a></button>
+                    </div>
+                    <div class="about-iris-button">
+                        <button id="aboutIrisButton"><a href="about-iris.html"><span>Sobre a Iris</span></a></button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="sepalLength">Comprimento da Sépala</label>
+                        <input id="sepalLength" type="text" name="sepalLength" placeholder="Comprimento da sépala"
+                            required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="sepalWidth">Largura da Sépala</label>
+                        <input id="sepalWidth" type="text" name="sepalWidth" placeholder="Largura da sépala" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="petalLength">Comprimento da Pétala</label>
+                        <input id="petalLength" type="text" name="petalLength" placeholder="Comprimento da pétala"
+                            required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="petalWidth">Largura da Pétala</label>
+                        <input id="petalWidth" type="text" name="petalWidth" placeholder="Largura da pétala" required>
+                    </div>
+                </div>
+
+                <div class="continue-button">
+                    <button type="submit">Continuar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const clearFieldsButton = document.getElementById('clearFieldsButton');
+            const aboutUsButton = document.getElementById('aboutUsButton');
+            const aboutIrisButton = document.getElementById('aboutIrisButton');
+            const flowerIdentificationForm = document.getElementById('flowerIdentificationForm');
+    
+            clearFieldsButton.addEventListener('click', function (event) {
+                event.preventDefault();
+                // Adicione aqui o código para limpar os campos do formulário
+                clearFormFields();
+            });
+    
+            aboutUsButton.addEventListener('click', function (event) {
+                // Adicione aqui o código para redirecionar para a página "Sobre Nós"
+                window.location.href = 'about-us.html';
+            });
+    
+            aboutIrisButton.addEventListener('click', function (event) {
+                // Adicione aqui o código para redirecionar para a página "Sobre a Iris"
+                window.location.href = 'about-iris.html';
+            });
+    
+            flowerIdentificationForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                // Adicione aqui o código para processar o formulário de identificação de flor
+                console.log('Formulário enviado!');
+            });
+    
+            function clearFormFields() {
+                // Adicione aqui o código para limpar os campos do formulário
+                document.getElementById('sepalLength').value = '';
+                document.getElementById('sepalWidth').value = '';
+                document.getElementById('petalLength').value = '';
+                document.getElementById('petalWidth').value = '';
+            }
+        });
+    </script>
+        
+    
+</body>
+
+</html>
